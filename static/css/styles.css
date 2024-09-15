@@ -1,0 +1,65 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    height: calc(100vh - 30px);
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #1e1e1e;
+}
+
+.pane {
+    border: 1px solid #3e3e3e;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.pane-header {
+    background-color: #2e2e2e;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.pane-content {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.CodeMirror {
+    height: 100% !important;
+}
+
+#preview-pane .pane-content {
+    padding: 10px;
+}
+
+#atomizer-version {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #2e2e2e;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 12px;
+    border-top: 1px solid #3e3e3e;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
